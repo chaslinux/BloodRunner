@@ -29,6 +29,11 @@ switch (state)
 				image_index = 0;
 				state = "Roll";
 			}
+			if keyboard_check_pressed(vk_shift)
+			{
+				image_index = 0;
+				state = "AttackOne";
+			}
 		#endregion	
 		break;
 		
@@ -46,6 +51,13 @@ switch (state)
 			{
 				x -= hero_speed;
 			}
+		#endregion
+		break;
+		
+	case "AttackOne":
+		#region AttackOneState
+			sprite_index = s_skeleton_attack_one;
+			image_speed = 1;
 		#endregion
 		break;
 }
