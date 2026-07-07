@@ -23,11 +23,21 @@ if state == "Move" {
 	}
 	if keyboard_check_pressed(vk_space)
 	{
+		image_index = 0;
 		state = "Roll";
 	}
 }
 
 if state == "Roll" {
 		sprite_index = s_skeleton_roll;
-		image_speed = 0.6;
+		image_speed = 0.3;
+		
+		if image_index == 1 && ! place_meeting(x + hero_speed,y, obj_wall)
+		{
+			x += hero_speed;
+		}
+		if image_index == -1 && ! place_meeting(x - hero_speed,y, obj_wall)
+		{
+			x -= hero_speed;
+		}
 }
