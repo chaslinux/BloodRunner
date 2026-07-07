@@ -9,17 +9,17 @@ switch (state)
 			}
 
 			// Movement
-			if keyboard_check(ord("D")) and ! place_meeting(x+hero_speed,y,obj_wall)
+			if keyboard_check(ord("D"))
 			{
-				x +=hero_speed;
+				moveit(global.hero_speed,0);
 				image_xscale =1;
 				sprite_index = s_skeleton_run;
 				image_speed = 0.6;
 			}
 
-			if keyboard_check(ord("A")) and ! place_meeting(x-hero_speed,y,obj_wall)
+			if keyboard_check(ord("A"))
 			{
-				x -=hero_speed;	
+				moveit(-global.hero_speed,0);
 				image_xscale =-1;
 				sprite_index = s_skeleton_run;
 				image_speed = 0.6;
@@ -42,14 +42,14 @@ switch (state)
 			sprite_index = s_skeleton_roll;
 			image_speed = 0.6;
 		
-			if image_xscale == 1 and not place_meeting(x + hero_speed,y, obj_wall)
+			if image_xscale == 1
 			{
-				x += hero_speed;
+				moveit(global.hero_speed+2,0);
 			}
 		
-			if image_xscale == -1 and not place_meeting(x - hero_speed,y, obj_wall)
+			if image_xscale == -1
 			{
-				x -= hero_speed;
+				moveit(-(global.hero_speed+2),0);
 			}
 		#endregion
 		break;

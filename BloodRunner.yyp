@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hero","folderPath":"folders/Objects/Hero.yy","name":"Hero","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -29,6 +30,7 @@
     {"id":{"name":"obj_hero","path":"objects/obj_hero/obj_hero.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"id":{"name":"moveit","path":"scripts/moveit/moveit.yy",},},
     {"id":{"name":"s_skeleton_attack_one_damage","path":"sprites/s_skeleton_attack_one_damage/s_skeleton_attack_one_damage.yy",},},
     {"id":{"name":"s_skeleton_attack_one","path":"sprites/s_skeleton_attack_one/s_skeleton_attack_one.yy",},},
     {"id":{"name":"s_skeleton_attack_three_damage","path":"sprites/s_skeleton_attack_three_damage/s_skeleton_attack_three_damage.yy",},},
