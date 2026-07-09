@@ -1,11 +1,5 @@
-if state == "Roll"
+if state == "Roll" || state == "AttackOne" || state == "AttackTwo"
 {
 	image_index = 0;
 	state = "Move";	
-}
-
-if state == "AttackOne"
-{
-	image_index = 0;
-	state = "Move";
 }

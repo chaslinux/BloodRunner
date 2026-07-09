@@ -29,7 +29,7 @@ switch (state)
 				image_index = 0;
 				state = "Roll";
 			}
-			if keyboard_check_pressed(vk_shift)
+			if keyboard_check_pressed(vk_rcontrol)
 			{
 				image_index = 0;
 				state = "AttackOne";
@@ -57,7 +57,20 @@ switch (state)
 	case "AttackOne":
 		#region AttackOneState
 			sprite_index = s_skeleton_attack_one;
-			image_speed = 1;
+			image_speed = 0.3;
+			
+			if keyboard_check_pressed(vk_rcontrol) and animation_hit_frame_range(2,4)
+			{
+				image_index = 0;
+				state = "AttackTwo";
+			}			
+		#endregion
+		break;
+	
+	case "AttackTwo":
+		#region AttackTwoState
+			sprite_index = s_skeleton_attack_two;
+			image_speed = 0.3;			
 		#endregion
 		break;
 }
